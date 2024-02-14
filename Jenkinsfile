@@ -28,7 +28,7 @@ pipeline {
         steps{
 	  script{
 		echo 'running trufflehog to check project history for secrets'
-		sh '/usr/local/lib/python3.10/dist-packages/trufflehog --regex --entropy=False --max_depth=3 https://github.com/pawnu/secDevLabs'
+		sh '/usr/local/lib/python3.10/dist-packages/truffleHog/ --regex --entropy=False --max_depth=3 https://github.com/pawnu/secDevLabs'
 	  }
         }
       }
