@@ -35,7 +35,7 @@ pipeline {
       stage('SCA'){
         steps{
           echo 'running python safety check on requirements.txt file'
-          sh '/home/dazai/.local/bin/safety check -r $WORKSPACE/owasp-top10-2017-apps/a7/gossip-world/app/requirements.txt'
+          sh '/home/dazai/virtualpyenv/lib/python3.10/site-packages/ check -r $WORKSPACE/owasp-top10-2017-apps/a7/gossip-world/app/requirements.txt'
           /*
 	  echo 'running liccheck on dependencies'
 	  sh """
