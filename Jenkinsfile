@@ -39,9 +39,9 @@ pipeline {
           */
 	  echo 'running liccheck on dependencies'
 	  sh """
-              virtualenv --no-site-packages .
+              /home/dazai/virtualpyenv/ --no-site-packages .
               source bin/activate
-	      pip install -r $WORKSPACE/owasp-top10-2017-apps/a7/gossip-world/app/requirements.txt
+	      pip3 install -r $WORKSPACE/owasp-top10-2017-apps/a7/gossip-world/app/requirements.txt
               liccheck -s ~/my_strategy.ini -r $WORKSPACE/owasp-top10-2017-apps/a7/gossip-world/app/requirements.txt
               deactivate
             """
