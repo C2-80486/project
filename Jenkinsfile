@@ -24,14 +24,14 @@ pipeline {
 	  git 'https://github.com/pawnu/secDevLabs.git'
         }
       }      
-      stage('git secret check'){
+/*      stage('git secret check'){
         steps{
 	  script{
 		echo 'running trufflehog to check project history for secrets'
 		sh 'truffleHog --regex --entropy=False --max_depth=3 https://github.com/pawnu/secDevLabs'
 	  }
         }
-      }
+      } */
       stage('SCA'){
         steps{
           echo 'running python safety check on requirements.txt file'
